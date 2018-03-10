@@ -182,7 +182,9 @@ public class AITextSampleActivity extends BaseActivity implements AdapterView.On
             public void run() {
                 Log.d(TAG, "onResult");
 
-                resultTextView.setText(gson.toJson(response));
+                String jsonStr = gson.toJson(response);
+                Log.e(TAG, "response = " + jsonStr);
+                resultTextView.setText(jsonStr);
 
                 Log.i(TAG, "Received success response");
 
