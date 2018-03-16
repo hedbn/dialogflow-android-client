@@ -74,6 +74,7 @@ public class AITextSampleActivity extends BaseActivity implements AdapterView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        TTS.init(getApplicationContext());
 
         setContentView(R.layout.activity_aitext_sample);
 
