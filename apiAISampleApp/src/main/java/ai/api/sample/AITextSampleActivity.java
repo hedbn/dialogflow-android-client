@@ -34,6 +34,9 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.simple.SimpleLoggerContextFactory;
+
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -57,6 +60,12 @@ import ai.api.model.Status;
  * Created by alexey on 07/12/16.
  */
 public class AITextSampleActivity extends BaseActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
+
+
+    // https://github.com/dialogflow/dialogflow-android-client/issues/34#issuecomment-311106345
+    static {
+        LogManager.setFactory(new SimpleLoggerContextFactory());
+    }
 
     public static final String TAG = AITextSampleActivity.class.getName();
 

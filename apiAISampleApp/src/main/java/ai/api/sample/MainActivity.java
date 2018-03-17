@@ -22,9 +22,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.simple.SimpleLoggerContextFactory;
+
 public class MainActivity extends BaseActivity {
 
     public static final String TAG = MainActivity.class.getName();
+
+    // https://github.com/dialogflow/dialogflow-android-client/issues/34#issuecomment-311106345
+    static {
+        LogManager.setFactory(new SimpleLoggerContextFactory());
+    }
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
